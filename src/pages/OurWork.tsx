@@ -141,18 +141,21 @@ export default function OurWork() {
                 location: 'Urban Centers',
                 description: 'We established 15 community kitchens in underserved neighborhoods, providing hot meals daily while creating jobs and teaching culinary skills to local residents.',
                 results: ['5,000 meals served daily', '50 jobs created', '200 volunteers trained'],
+                image: '/sl_1.jpg'
               },
               {
                 title: 'Back to School Drive',
                 location: 'Rural Communities',
                 description: 'Annual program providing backpacks, school supplies, and technology to students from low-income families, ensuring they start the school year prepared.',
                 results: ['10,000 students equipped', '500 laptops distributed', '100% graduation rate increase'],
+                image: 'sl_2.jpg'
               },
               {
                 title: 'Clean Water Project',
                 location: 'International',
                 description: 'Building sustainable water infrastructure in communities without reliable access to clean water, including wells, filtration systems, and hygiene education.',
                 results: ['30 wells installed', '50,000 people served', '80% reduction in waterborne illness'],
+                image: '/sl_3.jpg'
               },
             ].map((project, index) => (
               <div
@@ -183,7 +186,7 @@ export default function OurWork() {
                 </div>
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
                   <img
-                    src="/COVER.png"
+                    src={project.image}
                     alt={project.title}
                     className={`rounded-2xl shadow-xl transform ${
                       index % 2 === 0 ? 'rotate-2' : '-rotate-2'
