@@ -1,194 +1,121 @@
-import { Utensils, GraduationCap, Home, HeartHandshake, Droplets, Zap } from 'lucide-react';
+import { Play } from 'lucide-react';
 import DecorativeCircle from '../components/DecorativeCircle';
 
 export default function OurWork() {
   return (
     <div className="pt-20">
-      <section className="relative py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] overflow-hidden">
-        <DecorativeCircle color="gold" size="large" position="top-10 right-10" />
-        <DecorativeCircle color="gold" size="medium" position="bottom-10 left-10" />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
-            Our Work
+      <section
+        className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(/COVER.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-[#6B2C91] opacity-70"></div>
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-6xl md:text-8xl font-black text-white tracking-tight">
+            ACTIVE CAMPAIGNS
           </h1>
-          <p className="text-xl md:text-2xl text-white font-medium max-w-3xl mx-auto leading-relaxed">
-            Transforming communities through targeted programs and sustainable initiatives
-          </p>
         </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-[#6B2C91] mb-4">
-              Program Areas
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive approach addresses multiple aspects of community wellbeing
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Utensils,
-                title: 'Food Distribution',
-                description: 'Providing nutritious meals and groceries to families facing food insecurity. We partner with local food banks and community kitchens.',
-                impact: '500K+ meals distributed',
-                color: 'bg-[#6B2C91]',
-              },
-              {
-                icon: GraduationCap,
-                title: 'Education Programs',
-                description: 'Supporting students with school supplies, tutoring, and scholarship opportunities to ensure every child can succeed.',
-                impact: '10K+ students supported',
-                color: 'bg-[#E8C547]',
-              },
-              {
-                icon: Home,
-                title: 'Housing Support',
-                description: 'Helping families secure and maintain safe, stable housing through rental assistance and home improvement programs.',
-                impact: '2K+ families housed',
-                color: 'bg-[#6B2C91]',
-              },
-              {
-                icon: HeartHandshake,
-                title: 'Healthcare Access',
-                description: 'Connecting community members with healthcare services, medical supplies, and wellness programs.',
-                impact: '15K+ healthcare connections',
-                color: 'bg-[#E8C547]',
-              },
-              {
-                icon: Droplets,
-                title: 'Clean Water',
-                description: 'Installing water filtration systems and wells in communities lacking access to clean, safe drinking water.',
-                impact: '30+ water systems built',
-                color: 'bg-[#6B2C91]',
-              },
-              {
-                icon: Zap,
-                title: 'Emergency Relief',
-                description: 'Rapid response to natural disasters and crises, providing immediate aid and long-term recovery support.',
-                impact: '50+ emergencies responded to',
-                color: 'bg-[#E8C547]',
-              },
-            ].map((program, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 border-2 border-gray-100"
-              >
-                <div className={`${program.color} w-16 h-16 rounded-full flex items-center justify-center mb-6`}>
-                  <program.icon className="text-white" size={28} />
-                </div>
-                <h3 className="text-2xl font-black text-[#6B2C91] mb-4">{program.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-4">{program.description}</p>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="text-sm font-bold text-[#E8C547]">{program.impact}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#6B2C91] to-[#8B3CB1] relative overflow-hidden">
-        <DecorativeCircle color="gold" size="medium" position="top-0 left-0" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              Impact by the Numbers
-            </h2>
-            <p className="text-xl text-white max-w-2xl mx-auto">
-              Real results from our programs across communities
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: '1.2M+', label: 'Total Meals', sublabel: 'Served to families' },
-              { number: '25K+', label: 'People Helped', sublabel: 'Direct beneficiaries' },
-              { number: '50+', label: 'Communities', sublabel: 'Across 12 countries' },
-              { number: '100+', label: 'Active Programs', sublabel: 'Running currently' },
-            ].map((stat, index) => (
-              <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-5xl md:text-6xl font-black text-[#E8C547] mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-xl font-bold text-white mb-1">{stat.label}</div>
-                <div className="text-sm text-gray-200">{stat.sublabel}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div
+          className="absolute bottom-0 left-0 right-0 h-32 bg-white"
+          style={{
+            clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 50%)',
+          }}
+        ></div>
       </section>
 
       <section className="py-20 bg-white relative overflow-hidden">
         <DecorativeCircle color="purple" size="large" position="top-0 right-0" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-[#6B2C91] mb-4">
-              Featured Projects
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Spotlight on some of our most impactful initiatives
-            </p>
-          </div>
+        <DecorativeCircle color="gold" size="medium" position="bottom-20 left-0" />
 
-          <div className="space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="space-y-24">
             {[
               {
                 title: 'Community Kitchen Initiative',
-                location: 'Urban Centers',
-                description: 'We established 15 community kitchens in underserved neighborhoods, providing hot meals daily while creating jobs and teaching culinary skills to local residents.',
-                results: ['5,000 meals served daily', '50 jobs created', '200 volunteers trained'],
+                subtitle: 'Feeding Families, Building Hope',
+                description: 'We established 15 community kitchens in underserved neighborhoods, providing hot meals daily while creating jobs and teaching culinary skills to local residents. This program goes beyond just feeding people—it creates opportunities for economic empowerment and community building.',
+                stats: [
+                  { value: '5,000+', label: 'Meals Served Daily' },
+                  { value: '50', label: 'Jobs Created' },
+                  { value: '200', label: 'Volunteers Trained' },
+                ],
               },
               {
                 title: 'Back to School Drive',
-                location: 'Rural Communities',
-                description: 'Annual program providing backpacks, school supplies, and technology to students from low-income families, ensuring they start the school year prepared.',
-                results: ['10,000 students equipped', '500 laptops distributed', '100% graduation rate increase'],
+                subtitle: 'Empowering Education for Every Child',
+                description: 'Annual program providing backpacks, school supplies, and technology to students from low-income families, ensuring they start the school year prepared. We believe every child deserves the tools they need to succeed in the classroom and beyond.',
+                stats: [
+                  { value: '10,000+', label: 'Students Equipped' },
+                  { value: '500', label: 'Laptops Distributed' },
+                  { value: '100%', label: 'Graduation Rate Increase' },
+                ],
               },
               {
                 title: 'Clean Water Project',
-                location: 'International',
-                description: 'Building sustainable water infrastructure in communities without reliable access to clean water, including wells, filtration systems, and hygiene education.',
-                results: ['30 wells installed', '50,000 people served', '80% reduction in waterborne illness'],
+                subtitle: 'Bringing Life-Saving Resources',
+                description: 'Building sustainable water infrastructure in communities without reliable access to clean water, including wells, filtration systems, and hygiene education. Access to clean water is a fundamental human right, and we are working to make it a reality for all.',
+                stats: [
+                  { value: '30+', label: 'Wells Installed' },
+                  { value: '50,000', label: 'People Served' },
+                  { value: '80%', label: 'Reduction in Waterborne Illness' },
+                ],
               },
-            ].map((project, index) => (
+            ].map((campaign, index) => (
               <div
                 key={index}
-                className="grid md:grid-cols-2 gap-8 items-center bg-gray-50 rounded-3xl p-8 md:p-12 shadow-lg"
+                className="grid md:grid-cols-2 gap-12 items-center"
               >
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                  <div className="mb-4">
-                    <span className="inline-block bg-[#E8C547] text-[#6B2C91] px-4 py-2 rounded-full text-sm font-bold">
-                      {project.location}
-                    </span>
-                  </div>
-                  <h3 className="text-3xl font-black text-[#6B2C91] mb-4">{project.title}</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    {project.description}
-                  </p>
-                  <div className="space-y-2">
-                    <p className="font-bold text-[#6B2C91] mb-3">Key Results:</p>
-                    {project.results.map((result, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <div className="bg-[#E8C547] w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-[#6B2C91] font-black text-sm">✓</span>
-                        </div>
-                        <p className="text-gray-700">{result}</p>
-                      </div>
-                    ))}
+                  <div className="relative group">
+                    <img
+                      src="/COVER.png"
+                      alt={campaign.title}
+                      className="w-full h-[400px] object-cover rounded-3xl shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#6B2C91]/80 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
+                      <button className="bg-[#E8C547] text-[#6B2C91] px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <Play size={20} fill="currentColor" />
+                        WATCH THE VIDEO
+                      </button>
+                    </div>
                   </div>
                 </div>
+
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                  <img
-                    src="/COVER.png"
-                    alt={project.title}
-                    className={`rounded-2xl shadow-xl transform ${
-                      index % 2 === 0 ? 'rotate-2' : '-rotate-2'
-                    } hover:rotate-0 transition-transform duration-300`}
-                  />
+                  <div className="space-y-6">
+                    <div>
+                      <h2 className="text-4xl md:text-5xl font-black text-[#6B2C91] mb-2 leading-tight">
+                        {campaign.title}
+                      </h2>
+                      <p className="text-xl font-bold text-[#E8C547]">{campaign.subtitle}</p>
+                    </div>
+
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      {campaign.description}
+                    </p>
+
+                    <div className="grid grid-cols-3 gap-4 pt-6">
+                      {campaign.stats.map((stat, idx) => (
+                        <div key={idx} className="text-center">
+                          <div className="text-3xl md:text-4xl font-black text-[#6B2C91]">
+                            {stat.value}
+                          </div>
+                          <div className="text-sm font-bold text-gray-600 mt-1">
+                            {stat.label}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-4">
+                      <button className="bg-[#6B2C91] text-white px-10 py-4 rounded-full font-black text-lg hover:bg-[#8B3CB1] transform hover:scale-105 transition-all shadow-lg">
+                        DONATE NOW
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -196,20 +123,70 @@ export default function OurWork() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1]">
+      <section className="py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] relative overflow-hidden">
+        <DecorativeCircle color="gold" size="large" position="top-10 right-10" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+              PAST CAMPAIGNS
+            </h2>
+            <p className="text-xl text-white max-w-3xl mx-auto">
+              Completed projects that have made lasting impact in communities
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Holiday Food Drive',
+                impact: '100,000 meals distributed',
+                year: '2023',
+              },
+              {
+                title: 'Disaster Relief Fund',
+                impact: '5,000 families supported',
+                year: '2023',
+              },
+              {
+                title: 'School Rebuild Project',
+                impact: '3 schools renovated',
+                year: '2022',
+              },
+            ].map((past, index) => (
+              <div
+                key={index}
+                className="relative group overflow-hidden rounded-2xl shadow-2xl"
+              >
+                <img
+                  src="/COVER.png"
+                  alt={past.title}
+                  className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#6B2C91] via-[#6B2C91]/60 to-transparent flex flex-col justify-end p-8">
+                  <span className="text-[#E8C547] font-bold text-sm mb-2">{past.year}</span>
+                  <h3 className="text-2xl font-black text-white mb-2">{past.title}</h3>
+                  <p className="text-white font-medium">{past.impact}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-            Want to Learn More?
+          <h2 className="text-4xl md:text-5xl font-black text-[#6B2C91] mb-6">
+            Want to Support Our Work?
           </h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed">
-            Get detailed reports on our programs and see how your support creates real change
+          <p className="text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Every contribution helps us launch new campaigns and expand our impact in communities that need it most
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#E8C547] text-[#6B2C91] px-12 py-5 rounded-full font-black text-xl hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg">
-              View Impact Report
+            <button className="bg-[#6B2C91] text-white px-12 py-5 rounded-full font-black text-xl hover:bg-[#8B3CB1] transform hover:scale-105 transition-all shadow-lg">
+              DONATE TODAY
             </button>
-            <button className="bg-white text-[#6B2C91] px-12 py-5 rounded-full font-black text-xl hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg">
-              Visit a Program
+            <button className="bg-[#E8C547] text-[#6B2C91] px-12 py-5 rounded-full font-black text-xl hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg">
+              BECOME A VOLUNTEER
             </button>
           </div>
         </div>
