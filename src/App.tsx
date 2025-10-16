@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import WhoWeAre from './pages/WhoWeAre';
 import Supporters from './pages/Supporters';
 import OurWork from './pages/OurWork';
+import Founder from './pages/Founder';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -14,6 +15,8 @@ function App() {
         return <HomePage />;
       case 'who-we-are':
         return <WhoWeAre />;
+      case 'founder':
+        return <Founder />;
       case 'supporters':
         return <Supporters />;
       case 'our-work':

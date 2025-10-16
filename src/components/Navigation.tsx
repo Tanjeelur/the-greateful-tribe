@@ -12,6 +12,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
   const menuItems = [
     { id: 'home', label: 'Home' },
     { id: 'who-we-are', label: 'Who We Are' },
+    { id: 'founder', label: 'Our Founder' },
     { id: 'our-work', label: 'Our Work' },
     { id: 'supporters', label: 'Supporters' },
   ];
