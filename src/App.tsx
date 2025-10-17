@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import HomePage from './pages/HomePage';
 import WhoWeAre from './pages/WhoWeAre';
@@ -8,6 +8,20 @@ import Founder from './pages/Founder';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    const handleNavigate = (event: Event) => {
+      const customEvent = event as CustomEvent;
+      setCurrentPage(customEvent.detail);
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener('navigate', handleNavigate);
+
+    return () => {
+      window.removeEventListener('navigate', handleNavigate);
+    };
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
