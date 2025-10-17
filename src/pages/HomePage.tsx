@@ -56,9 +56,9 @@ export default function HomePage() {
             loop
             playsInline
             className="w-full h-full object-cover opacity-80"
-            src="https://player.vimeo.com/progressive_redirect/playback/1040579974/rendition/1080p/file.mp4?loc=external&signature=e85c8e1c97891aae0f4c8f2c4c4f0a4b0a4b0a4b0a4b0a4b0a4b0a4b0a4b0a4b"
+            src="website-intro.mp4"
           >
-            <source src="https://player.vimeo.com/progressive_redirect/playback/1040579974/rendition/1080p/file.mp4?loc=external&signature=e85c8e1c97891aae0f4c8f2c4c4f0a4b0a4b0a4b0a4b0a4b0a4b0a4b0a4b0a4b" type="video/mp4" />
+            <source src="website-intro" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
           <button className="absolute top-8 right-8 bg-black/50 p-4 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm">
