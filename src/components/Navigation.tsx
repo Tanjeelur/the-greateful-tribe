@@ -14,7 +14,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
     { id: 'who-we-are', label: 'Who We Are' },
     { id: 'founder', label: 'Our Founder' },
     { id: 'our-work', label: 'Our Work' },
-    { id: 'supporters', label: 'Supporters' },
+    { id: 'gallery', label: 'Gallery' },
   ];
 
   const handleNavigate = (page: string) => {

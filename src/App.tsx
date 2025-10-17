@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import HomePage from './pages/HomePage';
 import WhoWeAre from './pages/WhoWeAre';
-import Supporters from './pages/Supporters';
+import Gallery from './pages/Gallery';
 import OurWork from './pages/OurWork';
 import Founder from './pages/Founder';
 
@@ -31,8 +31,8 @@ function App() {
         return <WhoWeAre />;
       case 'founder':
         return <Founder />;
-      case 'supporters':
-        return <Supporters />;
+      case 'gallery':
+        return <Gallery />;
       case 'our-work':
         return <OurWork />;
       default:
