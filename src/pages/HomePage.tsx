@@ -18,9 +18,13 @@ export default function HomePage() {
                 Join our mission to create lasting impact in communities around the world
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="bg-[#E8C547] text-[#6B2C91] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg flex items-center justify-center gap-2">
+                <a 
+                  href="https://t.me/TheGratefulTribe" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="bg-[#E8C547] text-[#6B2C91] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg flex items-center justify-center gap-2">
                   Get Involved <ArrowRight size={20} />
-                </button>
+                </a>
                 <button className="bg-white text-[#6B2C91] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg">
                   Learn More
                 </button>
@@ -123,9 +127,15 @@ export default function HomePage() {
             <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
               Join thousands of supporters who are helping us create lasting change in communities worldwide
             </p>
-            <button className="bg-[#E8C547] text-[#6B2C91] px-12 py-5 rounded-full font-black text-xl hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg">
+    
+            <a
+              href="https://t.me/TheGratefulTribe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#E8C547] text-[#6B2C91] px-12 py-5 rounded-full font-black text-xl hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg"
+            >
               Join Our Tribe
-            </button>
+            </a>
           </div>
         </div>
       </section>

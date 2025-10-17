@@ -13,7 +13,7 @@ export default function Founder() {
             <div className="relative group">
               <div className="absolute -inset-4 bg-[#E8C547] rounded-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
               <img
-                src="/COVER.png"
+                src="/sl_founder.jpg"
                 alt="Sal Khan - Founder"
                 className="relative rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
               />
@@ -92,7 +92,7 @@ export default function Founder() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
                 icon: Globe2,
@@ -112,12 +112,7 @@ export default function Founder() {
                 label: 'Years Experience',
                 color: 'bg-[#6B2C91]',
               },
-              {
-                icon: Award,
-                number: '100+',
-                label: 'Speaking Engagements',
-                color: 'bg-[#E8C547]',
-              },
+              
             ].map((stat, index) => (
               <div
                 key={index}
@@ -132,7 +127,7 @@ export default function Founder() {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: 'International Business Leader',
@@ -161,7 +156,7 @@ export default function Founder() {
                 <p className="text-gray-600 leading-relaxed">{achievement.description}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -197,7 +192,7 @@ export default function Founder() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] relative overflow-hidden">
+      {/* <section className="py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] relative overflow-hidden">
         <DecorativeCircle color="gold" size="medium" position="top-10 left-10" />
         <DecorativeCircle color="gold" size="small" position="bottom-10 right-20" />
 
@@ -243,11 +238,11 @@ export default function Founder() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {/* <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="relative group overflow-hidden rounded-2xl shadow-lg">
               <img
                 src="/sl_1.jpg"
@@ -284,7 +279,7 @@ export default function Founder() {
                 <p className="text-sm">Connecting resources across borders to where they're needed most</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] rounded-3xl p-12 md:p-16 text-center shadow-2xl">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
@@ -294,12 +289,17 @@ export default function Founder() {
               Be part of a global movement that's bridging opportunity gaps and creating pathways to prosperity for communities in need. Your involvement can help turn vision into reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#E8C547] text-[#6B2C91] px-10 py-4 rounded-full font-black text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg">
-                Support Our Mission
-              </button>
-              <button className="bg-white text-[#6B2C91] px-10 py-4 rounded-full font-black text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg">
+              <a
+                href="https://t.me/TheGratefulTribe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#E8C547] text-[#6B2C91] px-10 py-4 rounded-full font-black text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg inline-block text-center"
+              >
+                Join Our Tribe
+              </a>
+              {/* <button className="bg-white text-[#6B2C91] px-10 py-4 rounded-full font-black text-lg hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg">
                 Learn More About Our Work
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

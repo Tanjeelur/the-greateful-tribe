@@ -28,7 +28,7 @@ export default function OurWork() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Utensils,
@@ -87,7 +87,7 @@ export default function OurWork() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -103,12 +103,12 @@ export default function OurWork() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { number: '1.2M+', label: 'Total Meals', sublabel: 'Served to families' },
-              { number: '25K+', label: 'People Helped', sublabel: 'Direct beneficiaries' },
-              { number: '50+', label: 'Communities', sublabel: 'Across 12 countries' },
-              { number: '100+', label: 'Active Programs', sublabel: 'Running currently' },
+              { number: '3000+', label: 'Total Meals', sublabel: 'Served to children' },
+              { number: '7000+', label: 'Children Helped', sublabel: 'Direct beneficiaries' },
+              { number: '12+', label: 'Communities', sublabel: 'Across 2 countries' },
+              // { number: '100+', label: 'Active Programs', sublabel: 'Running currently' },
             ].map((stat, index) => (
               <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <div className="text-5xl md:text-6xl font-black text-[#E8C547] mb-2">
@@ -137,25 +137,32 @@ export default function OurWork() {
           <div className="space-y-12">
             {[
               {
-                title: 'Community Kitchen Initiative',
+                title: '100 kids. 100 dreams. One big smile! 😄',
                 location: 'Urban Centers',
-                description: 'We established 15 community kitchens in underserved neighborhoods, providing hot meals daily while creating jobs and teaching culinary skills to local residents.',
-                results: ['5,000 meals served daily', '50 jobs created', '200 volunteers trained'],
+                description: 'The Grateful Tribe came together to spread joy, hope, and love — sharing school supplies, yummy meals, and bright smiles with 100 amazing little learners.Each backpack carried not just books, but belief. Each meal, a moment of care. 💛Because giving feels great when it comes from the heart — and every act of kindness adds up to something beautiful. ✨',
+                results: ['100 children supported with school supplies', ' 100+ warm meals shared with love', 'Countless smiles created 💫'],
                 image: '/sl_1.jpg'
               },
               {
-                title: 'Back to School Drive',
+                title: '🌟 Hearts in Action: Caring for All AgesSmiles all around! 😄💛',
                 location: 'Rural Communities',
-                description: 'Annual program providing backpacks, school supplies, and technology to students from low-income families, ensuring they start the school year prepared.',
-                results: ['10,000 students equipped', '500 laptops distributed', '100% graduation rate increase'],
+                description: 'The Grateful Tribe spent a beautiful day spreading joy to both little learners and cherished elders. From sharing school supplies and tasty meals with kids, to bringing care, companionship, and warmth to those at elderly homes — every moment was filled with love.Because kindness is contagious, and every act, big or small, makes the world brighter. ✨',
+                results: ['Children supported with school supplies & meals', 'Elders visited with gifts & companionship', 'Volunteers joined hands','Countless smiles & hearts touched 💫'],
                 image: 'sl_2.jpg'
               },
               {
-                title: 'Clean Water Project',
+                title: '🌟 Sharing Smiles, Changing Lives',
                 location: 'International',
-                description: 'Building sustainable water infrastructure in communities without reliable access to clean water, including wells, filtration systems, and hygiene education.',
-                results: ['30 wells installed', '50,000 people served', '80% reduction in waterborne illness'],
+                description: 'From warm meals to school supplies and study support, bidyanondo foundation is on a mission to bring hope and joy to children in need. Every backpack, every meal, every moment of learning is a step toward brighter futures. 💛Because when we come together, little acts of kindness turn into big dreams realized. ✨',
+                results: ['Children supported with meals & school supplies', ' Educational support provided for better learning', 'Volunteers joining hands to make a difference','Countless smiles and hearts touched 💫'],
                 image: '/sl_3.jpg'
+              },
+              {
+                title: '🌟 Bringing Hope to Street Children',
+                location: 'International',
+                description: 'No child should face life alone on the streets. 💛We reached out to underprivileged children, sharing warm meals, school supplies, and moments of care. Every smile, every helping hand, every act of kindness brings hope and a brighter tomorrow. ✨',
+                results: ['Children supported with food, school supplies, and learning', '  Volunteers coming together to make a difference','Countless smiles and hearts touched 💫'],
+                image: '/sl_4.jpg'
               },
             ].map((project, index) => (
               <div

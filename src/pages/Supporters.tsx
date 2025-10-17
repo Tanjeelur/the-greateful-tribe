@@ -31,18 +31,18 @@ export default function Supporters() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: DollarSign,
-                title: 'One-Time Donation',
-                description: 'Make an immediate impact with a single contribution that goes directly to communities in need',
-                cta: 'Donate Now',
-              },
-              {
-                icon: Calendar,
-                title: 'Monthly Giving',
-                description: 'Become a sustaining member and provide consistent support that helps us plan long-term programs',
-                cta: 'Join Monthly',
-              },
+              // {
+              //   icon: DollarSign,
+              //   title: 'One-Time Donation',
+              //   description: 'Make an immediate impact with a single contribution that goes directly to communities in need',
+              //   cta: 'Donate Now',
+              // },
+              // {
+              //   icon: Calendar,
+              //   title: 'Monthly Giving',
+              //   description: 'Become a sustaining member and provide consistent support that helps us plan long-term programs',
+              //   cta: 'Join Monthly',
+              // },
               {
                 icon: Users,
                 title: 'Volunteer',
@@ -61,12 +61,12 @@ export default function Supporters() {
                 description: 'Partner with us to create meaningful corporate social responsibility initiatives',
                 cta: 'Partner With Us',
               },
-              {
-                icon: Heart,
-                title: 'Legacy Giving',
-                description: 'Create lasting change through planned giving and ensure your values live on',
-                cta: 'Learn More',
-              },
+              // {
+              //   icon: Heart,
+              //   title: 'Legacy Giving',
+              //   description: 'Create lasting change through planned giving and ensure your values live on',
+              //   cta: 'Learn More',
+              // },
             ].map((way, index) => (
               <div
                 key={index}
@@ -86,7 +86,7 @@ export default function Supporters() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative">
@@ -132,7 +132,7 @@ export default function Supporters() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-white relative overflow-hidden">
         <DecorativeCircle color="gold" size="medium" position="bottom-0 left-0" />
