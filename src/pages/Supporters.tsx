@@ -1,4 +1,4 @@
-import { DollarSign, Calendar, Users, Heart, Share2, HandHeart } from 'lucide-react';
+import { Users, Share2, HandHeart } from 'lucide-react';
 import DecorativeCircle from '../components/DecorativeCircle';
 
 export default function Supporters() {

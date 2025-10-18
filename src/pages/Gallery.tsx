@@ -249,7 +249,7 @@ export default function Gallery() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item, index) => (
               <div
-                key={item.id}
+                key={`${item.id}-${index}`}
                 className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 ${
                   index % 5 === 0 ? 'lg:col-span-2 lg:row-span-2' : ''
                 }`}
@@ -266,10 +266,10 @@ export default function Gallery() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  {item.type === 'video' && (
+                  {item.type === 'video' && item.videoUrl && (
                     <div
                       className="absolute inset-0 flex items-center justify-center"
-                      onClick={() => setSelectedVideo(item.videoUrl || null)}
+                      onClick={() => setSelectedVideo(item.videoUrl ?? null)}
                     >
                       <div className="bg-[#E8C547] w-20 h-20 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform shadow-2xl">
                         <Play className="text-[#6B2C91] ml-1" size={32} fill="currentColor" />

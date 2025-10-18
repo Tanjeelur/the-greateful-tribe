@@ -1,4 +1,4 @@
-import { Sparkles, Globe2, Heart, Award, Users2, TrendingUp, BookOpen, ArrowRight } from 'lucide-react';
+import { Sparkles, Globe2, Heart, Users2, TrendingUp, ArrowRight } from 'lucide-react';
 import DecorativeCircle from '../components/DecorativeCircle';
 
 export default function Founder() {

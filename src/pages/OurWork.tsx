@@ -1,4 +1,4 @@
-import { Utensils, GraduationCap, Home, HeartHandshake, Droplets, Zap } from 'lucide-react';
+// icons removed to avoid unused-import TS errors; add back as needed
 import DecorativeCircle from '../components/DecorativeCircle';
 
 export default function OurWork() {
