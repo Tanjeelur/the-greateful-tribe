@@ -2,6 +2,9 @@ import { Sparkles, Globe2, Heart, Users2, TrendingUp, ArrowRight } from 'lucide-
 import DecorativeCircle from '../components/DecorativeCircle';
 
 export default function Founder() {
+  const navigateToWhoWeAre = () => {
+    window.dispatchEvent(new CustomEvent('navigate', { detail: 'who-we-are' }));
+  };
   return (
     <div className="pt-20">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1]">
@@ -32,7 +35,10 @@ export default function Founder() {
                 From medical school aspirations to global digital entrepreneur and philanthropic leader
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="bg-[#E8C547] text-[#6B2C91] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg flex items-center justify-center gap-2">
+                <button 
+                  onClick={navigateToWhoWeAre}
+                  className="bg-[#E8C547] text-[#6B2C91] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg flex items-center justify-center gap-2"
+                >
                   Learn About Our Mission <ArrowRight size={20} />
                 </button>
               </div>

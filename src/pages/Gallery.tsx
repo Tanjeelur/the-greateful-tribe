@@ -398,7 +398,7 @@ export default function Gallery() {
         </div>
       )}
 
-      <footer className="bg-[#6B2C91] text-white py-16">
+      {/* <footer className="bg-[#6B2C91] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <img src="/TGT-LOGO-1.png" alt="TGT Logo" className="h-20 w-20 mx-auto mb-6" />
@@ -451,7 +451,7 @@ export default function Gallery() {
             <p className="text-sm text-gray-400">&copy; 2024 The Grateful Tribe. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

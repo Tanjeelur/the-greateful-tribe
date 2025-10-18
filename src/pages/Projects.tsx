@@ -10,14 +10,16 @@ export default function Projects() {
       status: 'Active',
       impact: '1000+ members earning daily',
       link: 'https://t.me/LumaProtocolTribe ',
+      logo: 'luma_logo.jpg',
     },
     {
       title: 'Zionix Global',
       description: 'Zionix is an upcoming cryptocurrency AI trading platform that provides licensed, self-operating trading solutions for the modern investor. Designed to automate trades, optimize profits, and reduce risks, Zionix leverages advanced AI technology to make crypto trading simpler, smarter, and more efficient.Whether you’re a beginner or an experienced trader, Zionix is set to redefine the way people trade crypto, offering secure, reliable, and fully automated trading—making it easier than ever to grow your digital assets',
-      technologies: ['Comming Soon'],
+      technologies: ['Coming Soon'],
       status: 'In Progress',
       impact: '--',
       // link: '',
+      logo: 'zionix_logo.png',
     },
     // {
     //   title: 'Education Sponsorship',
@@ -87,8 +89,26 @@ export default function Projects() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] w-14 h-14 rounded-full flex items-center justify-center">
-                      <Briefcase className="text-white" size={28} />
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center overflow-hidden">
+                      {project.logo ? (
+                        // image logos live in public/images
+                        <img
+                          src={`/images/${project.logo}`}
+                          alt={`${project.title} logo`}
+                          className="w-14 h-14 object-cover"
+                          onError={(e) => {
+                            // replace broken image with fallback image
+                            // @ts-ignore
+                            e.currentTarget.onerror = null;
+                            // @ts-ignore
+                            e.currentTarget.src = '/images/logo-fallback.png';
+                          }}
+                        />
+                      ) : (
+                        <div className="bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] w-14 h-14 rounded-full flex items-center justify-center">
+                          <Briefcase className="text-white" size={28} />
+                        </div>
+                      )}
                     </div>
                     <span
                       className={`px-4 py-1 rounded-full text-sm font-bold ${
@@ -137,7 +157,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="w-full bg-gradient-to-r from-[#6B2C91] to-[#8B3CB1] text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transform hover:scale-105 transition-all flex items-center justify-center gap-2"
                   >
-                    Learn More <ArrowRight size={18} />
+                    Join <ArrowRight size={18} />
                   </a>
                 </div>
               </div>

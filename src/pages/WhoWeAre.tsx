@@ -2,6 +2,10 @@ import { Target, Eye, CheckCircle } from 'lucide-react';
 import DecorativeCircle from '../components/DecorativeCircle';
 
 export default function WhoWeAre() {
+  const navigateToProjects = () => {
+    window.dispatchEvent(new CustomEvent('navigate', { detail: 'projects' }));
+  };
+
   return (
     <div className="pt-20">
       <section className="relative py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] overflow-hidden">
@@ -139,7 +143,10 @@ export default function WhoWeAre() {
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed">
             Together, we can create a world where everyone has the opportunity to thrive
           </p>
-          <button className="bg-[#E8C547] text-[#6B2C91] px-12 py-5 rounded-full font-black text-xl hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg">
+          <button 
+            onClick={navigateToProjects}
+            className="bg-[#E8C547] text-[#6B2C91] px-12 py-5 rounded-full font-black text-xl hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-lg"
+          >
             Get Involved Today
           </button>
         </div>
