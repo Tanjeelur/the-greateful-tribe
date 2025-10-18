@@ -105,7 +105,7 @@ export default function HomePage() {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="mb-8">
-            <div className="text-7xl md:text-9xl font-black text-[#E8C547] mb-4">
+            <div className="text-5xl sm:text-7xl md:text-9xl font-black text-[#E8C547] mb-4">
               {hasStartedCounting && (
                 <CountUp
                   start={0}

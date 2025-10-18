@@ -21,9 +21,9 @@ export default function Gallery() {
     {
       id: '1',
       type: 'video',
-      title: '100 Kids, 100 Dreams - School Supply Drive',
-      description: 'Watch how The Grateful Tribe brought joy to 100 children with school supplies and warm meals',
-      thumbnail: '/sl_1.jpg',
+      title: 'We Took Street Kids to a Mall — What Happened Melted My Heart 💔',
+      description: 'We took underprivileged kids to a mall and told them — “Get whatever you want.” The smiles, the hugs, the pure joy… it’s something you’ll never forget.',
+      thumbnail: '/sl_shoping.jpg',
       // store only the YouTube video ID so the embed iframe works: https://www.youtube.com/watch?v=9WT-MwF3L7w
       videoUrl: '9WT-MwF3L7w',
       category: 'Education',
@@ -33,7 +33,7 @@ export default function Gallery() {
       type: 'photo',
       title: 'Hearts in Action: Multi-Generational Care',
       description: 'Spreading joy to children and elders in our community',
-      thumbnail: '/sl_2.jpg',
+      thumbnail: '/sl_shoping_2.jpg',
       category: 'Community',
     },
     {
@@ -66,9 +66,130 @@ export default function Gallery() {
       title: 'Our Mission in Action',
       description: 'See how we are helping children experience the joy of childhood',
       thumbnail: '/sl_1.jpg',
-      videoUrl: 'dQw4w9WgXcQ',
+      videoUrl: '',
       category: 'Mission',
     },
+    {
+      id: '2',
+      type: 'photo',
+      title: 'Hearts in Action: Multi-Generational Care',
+      description: 'Spreading joy to children and elders in our community',
+      thumbnail: '/sl_2.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_6.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_8.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_9.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_10.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_11.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_12.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_13.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_14.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_15.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_16.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_17.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_19.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_20.jpg',
+      category: 'Community',
+    },
+    {
+      id: '2',
+      type: 'photo',
+      title: '',
+      description: '',
+      thumbnail: '/sl_21.jpg',
+      category: 'Community',
+    },
+    
   ];
 
   const filteredItems = galleryItems.filter(item => {
@@ -222,6 +343,19 @@ export default function Gallery() {
             >
               <Instagram size={36} className="text-white" />
             </a>
+            <a
+              href="https://t.me/TheGratefulTribe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/10 p-6 rounded-full hover:bg-white/20 transition-all transform hover:scale-110 backdrop-blur-sm"
+              aria-label="Telegram"
+            >
+              <svg width="36" height="36" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <path d="M120 0C53.729 0 0 53.729 0 120s53.729 120 120 120 120-53.729 120-120S186.271 0 120 0z" fill="#2AABEE"/>
+                <path d="M48 124.5l30.5 11.5 12 38 19-27 48 29L48 124.5z" fill="#fff" opacity="0.9"/>
+                <path d="M48 124.5L192 72l-48 52-19 27-12-38L48 124.5z" fill="#fff" opacity="0.6"/>
+              </svg>
+            </a>
           </div>
 
           <a
@@ -296,6 +430,19 @@ export default function Gallery() {
                 aria-label="Instagram"
               >
                 <Instagram size={28} />
+              </a>
+              <a
+                href="https://t.me/TheGratefulTribe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 p-4 rounded-full hover:bg-white/20 transition-all transform hover:scale-110"
+                aria-label="Telegram"
+              >
+                <svg width="28" height="28" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                  <path d="M120 0C53.729 0 0 53.729 0 120s53.729 120 120 120 120-53.729 120-120S186.271 0 120 0z" fill="#2AABEE"/>
+                  <path d="M48 124.5l30.5 11.5 12 38 19-27 48 29L48 124.5z" fill="#fff" opacity="0.9"/>
+                  <path d="M48 124.5L192 72l-48 52-19 27-12-38L48 124.5z" fill="#fff" opacity="0.6"/>
+                </svg>
               </a>
       
               
