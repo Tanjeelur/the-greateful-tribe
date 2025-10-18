@@ -159,14 +159,15 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <a
-              href="https://t.me/TheGratefulTribe"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => {
+                const event = new CustomEvent('navigate', { detail: 'projects' });
+                window.dispatchEvent(event);
+              }}
               className="inline-flex items-center gap-2 bg-[#6B2C91] text-white px-12 py-6 rounded-full font-black text-xl hover:bg-[#8B3CB1] transform hover:scale-105 transition-all shadow-2xl"
             >
               Join the Projects <ArrowRight size={24} />
-            </a>
+            </button>
           </div>
         </div>
       </section>

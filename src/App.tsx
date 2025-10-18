@@ -5,6 +5,7 @@ import WhoWeAre from './pages/WhoWeAre';
 import Gallery from './pages/Gallery';
 import OurWork from './pages/OurWork';
 import Founder from './pages/Founder';
+import Projects from './pages/Projects';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -35,6 +36,8 @@ function App() {
         return <Gallery />;
       case 'our-work':
         return <OurWork />;
+      case 'projects':
+        return <Projects />;
       default:
         return <HomePage />;
     }
