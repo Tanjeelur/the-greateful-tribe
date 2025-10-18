@@ -213,7 +213,7 @@ export default function OurWork() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1]">
+      {/* <section className="py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
             Want to Learn More?
@@ -230,7 +230,7 @@ export default function OurWork() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <footer className="bg-[#6B2C91] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -4,47 +4,49 @@ import DecorativeCircle from '../components/DecorativeCircle';
 export default function Projects() {
   const projects = [
     {
-      title: 'Community Outreach Program',
-      description: 'Connect with local communities to identify children in need and provide direct support through educational resources, healthcare, and emotional care.',
-      technologies: ['Community Engagement', 'Social Media', 'Volunteer Coordination'],
+      title: 'Luma Protocol',
+      description: 'Luma Protocol is a DeFi 3.0 project built to help you make money in crypto. It offers staking, yield farming, and passive income rewards, so your money grows automatically with blockchain technology. Unlike complicated systems, Luma Protocol is simple, secure, and transparent, making it easy for anyone to start earning.',
+      technologies: ['Earn 0.5%–1% daily and 15%–30% monthly', 'Start with just $100', 'Instant, unlimited withdrawals anytime','300% returns under $10K | 400% above $10K','50% principal withdraw anytime, rest as daily rewards','Team profit overrides for unlimited extra income'],
+      status: 'Active',
+      impact: '1000+ members earning daily',
+      link: 'https://t.me/LumaProtocolTribe ',
+    },
+    {
+      title: 'Zionix Global',
+      description: 'Zionix is an upcoming cryptocurrency AI trading platform that provides licensed, self-operating trading solutions for the modern investor. Designed to automate trades, optimize profits, and reduce risks, Zionix leverages advanced AI technology to make crypto trading simpler, smarter, and more efficient.Whether you’re a beginner or an experienced trader, Zionix is set to redefine the way people trade crypto, offering secure, reliable, and fully automated trading—making it easier than ever to grow your digital assets',
+      technologies: ['Comming Soon'],
       status: 'In Progress',
-      impact: '5,000+ children reached',
+      impact: '--',
+      // link: '',
     },
-    {
-      title: 'Digital Marketing Initiative',
-      description: 'Join our digital marketing team to promote The Grateful Tribe mission while earning income through affiliate partnerships and content creation.',
-      technologies: ['Social Media Marketing', 'Content Creation', 'SEO'],
-      status: 'Active',
-      impact: '200+ active participants',
-    },
-    {
-      title: 'Education Sponsorship',
-      description: 'Partner with schools and educational institutions to sponsor underprivileged children. Help provide books, uniforms, and school supplies.',
-      technologies: ['Partnership Management', 'Fundraising', 'Event Planning'],
-      status: 'Active',
-      impact: '1,500+ students sponsored',
-    },
-    {
-      title: 'Online Skills Training',
-      description: 'Learn valuable digital skills including graphic design, video editing, and web development while contributing to our content creation needs.',
-      technologies: ['Graphic Design', 'Video Editing', 'Web Development'],
-      status: 'Active',
-      impact: '300+ members trained',
-    },
-    {
-      title: 'Healthcare Access Program',
-      description: 'Work with healthcare providers to ensure children receive proper medical care, vaccinations, and regular health checkups.',
-      technologies: ['Healthcare Coordination', 'Medical Partnerships', 'Data Management'],
-      status: 'In Progress',
-      impact: '2,000+ health checkups completed',
-    },
-    {
-      title: 'Youth Mentorship Network',
-      description: 'Become a mentor and guide young individuals toward personal and professional growth. Share your expertise and earn while making a difference.',
-      technologies: ['Mentorship', 'Career Coaching', 'Personal Development'],
-      status: 'Completed',
-      impact: '500+ mentorship pairs',
-    },
+    // {
+    //   title: 'Education Sponsorship',
+    //   description: 'Partner with schools and educational institutions to sponsor underprivileged children. Help provide books, uniforms, and school supplies.',
+    //   technologies: ['Partnership Management', 'Fundraising', 'Event Planning'],
+    //   status: 'Active',
+    //   impact: '1,500+ students sponsored',
+    // },
+    // {
+    //   title: 'Online Skills Training',
+    //   description: 'Learn valuable digital skills including graphic design, video editing, and web development while contributing to our content creation needs.',
+    //   technologies: ['Graphic Design', 'Video Editing', 'Web Development'],
+    //   status: 'Active',
+    //   impact: '300+ members trained',
+    // },
+    // {
+    //   title: 'Healthcare Access Program',
+    //   description: 'Work with healthcare providers to ensure children receive proper medical care, vaccinations, and regular health checkups.',
+    //   technologies: ['Healthcare Coordination', 'Medical Partnerships', 'Data Management'],
+    //   status: 'In Progress',
+    //   impact: '2,000+ health checkups completed',
+    // },
+    // {
+    //   title: 'Youth Mentorship Network',
+    //   description: 'Become a mentor and guide young individuals toward personal and professional growth. Share your expertise and earn while making a difference.',
+    //   technologies: ['Mentorship', 'Career Coaching', 'Personal Development'],
+    //   status: 'Completed',
+    //   impact: '500+ mentorship pairs',
+    // },
   ];
 
   return (
@@ -81,55 +83,63 @@ export default function Projects() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-xl border-2 border-gray-100 p-8 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-white rounded-2xl shadow-xl border-2 border-gray-100 p-8 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between h-full"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] w-14 h-14 rounded-full flex items-center justify-center">
-                    <Briefcase className="text-white" size={28} />
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] w-14 h-14 rounded-full flex items-center justify-center">
+                      <Briefcase className="text-white" size={28} />
+                    </div>
+                    <span
+                      className={`px-4 py-1 rounded-full text-sm font-bold ${
+                        project.status === 'Active'
+                          ? 'bg-green-100 text-green-700'
+                          : project.status === 'In Progress'
+                          ? 'bg-yellow-100 text-yellow-700'
+                          : 'bg-blue-100 text-blue-700'
+                      }`}
+                    >
+                      {project.status}
+                    </span>
                   </div>
-                  <span
-                    className={`px-4 py-1 rounded-full text-sm font-bold ${
-                      project.status === 'Active'
-                        ? 'bg-green-100 text-green-700'
-                        : project.status === 'In Progress'
-                        ? 'bg-yellow-100 text-yellow-700'
-                        : 'bg-blue-100 text-blue-700'
-                    }`}
+
+                  <h3 className="text-2xl font-black text-[#6B2C91] mb-3">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <div className="mb-4">
+                    <p className="text-sm font-bold text-gray-500 mb-2">Key Points:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="bg-[#E8C547]/20 text-[#6B2C91] px-3 py-1 rounded-full text-xs font-bold"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 text-[#6B2C91] mb-6">
+                    <Users size={20} />
+                    <span className="text-sm font-bold">{project.impact}</span>
+                  </div>
+                </div>
+                <div className="mt-auto">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-gradient-to-r from-[#6B2C91] to-[#8B3CB1] text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transform hover:scale-105 transition-all flex items-center justify-center gap-2"
                   >
-                    {project.status}
-                  </span>
+                    Learn More <ArrowRight size={18} />
+                  </a>
                 </div>
-
-                <h3 className="text-2xl font-black text-[#6B2C91] mb-3">
-                  {project.title}
-                </h3>
-
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="mb-4">
-                  <p className="text-sm font-bold text-gray-500 mb-2">Skills Involved:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="bg-[#E8C547]/20 text-[#6B2C91] px-3 py-1 rounded-full text-xs font-bold"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2 text-[#6B2C91] mb-6">
-                  <Users size={20} />
-                  <span className="text-sm font-bold">{project.impact}</span>
-                </div>
-
-                <button className="w-full bg-gradient-to-r from-[#6B2C91] to-[#8B3CB1] text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transform hover:scale-105 transition-all flex items-center justify-center gap-2">
-                  Learn More <ArrowRight size={18} />
-                </button>
               </div>
             ))}
           </div>
