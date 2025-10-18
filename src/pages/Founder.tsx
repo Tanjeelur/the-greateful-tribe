@@ -102,7 +102,7 @@ export default function Founder() {
               },
               {
                 icon: Users2,
-                number: '1000s',
+                number: '1000+',
                 label: 'Global Clients',
                 color: 'bg-[#E8C547]',
               },
@@ -183,7 +183,7 @@ export default function Founder() {
             </div>
             <div className="relative">
               <img
-                src="/sl_1.jpg"
+                src="/sl_5.png"
                 alt="Community Impact"
                 className="rounded-3xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300"
               />

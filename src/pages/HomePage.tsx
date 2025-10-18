@@ -66,7 +66,7 @@ export default function HomePage() {
           </button>
         </div>
 
-        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+        {/* <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6 text-shadow">
             Changing Lives<br />Through Gratitude
           </h1>
@@ -80,7 +80,7 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 bg-[#E8C547] text-[#6B2C91] px-10 py-5 rounded-full font-black text-xl hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-2xl">
             Get Involved <ArrowRight size={24} />
           </a>
-        </div>
+        </div> */}
       </section>
 
       <section className="py-20 md:py-32 bg-white relative overflow-hidden">
@@ -244,6 +244,19 @@ export default function HomePage() {
               >
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+              </a>
+              <a
+                href="https://t.me/TheGratefulTribe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 p-4 rounded-full hover:bg-white/20 transition-all transform hover:scale-110"
+                aria-label="Telegram"
+              >
+                <svg width="28" height="28" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                  <path d="M120 0C53.729 0 0 53.729 0 120s53.729 120 120 120 120-53.729 120-120S186.271 0 120 0z" fill="#2AABEE"/>
+                  <path d="M48 124.5l30.5 11.5 12 38 19-27 48 29L48 124.5z" fill="#fff" opacity="0.9"/>
+                  <path d="M48 124.5L192 72l-48 52-19 27-12-38L48 124.5z" fill="#fff" opacity="0.6"/>
                 </svg>
               </a>
             </div>

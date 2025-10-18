@@ -24,7 +24,8 @@ export default function Gallery() {
       title: '100 Kids, 100 Dreams - School Supply Drive',
       description: 'Watch how The Grateful Tribe brought joy to 100 children with school supplies and warm meals',
       thumbnail: '/sl_1.jpg',
-      videoUrl: 'dQw4w9WgXcQ',
+      // store only the YouTube video ID so the embed iframe works: https://www.youtube.com/watch?v=9WT-MwF3L7w
+      videoUrl: '9WT-MwF3L7w',
       category: 'Education',
     },
     {
@@ -296,6 +297,8 @@ export default function Gallery() {
               >
                 <Instagram size={28} />
               </a>
+      
+              
             </div>
 
             <p className="text-sm text-gray-400">&copy; 2024 The Grateful Tribe. All rights reserved.</p>

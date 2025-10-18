@@ -4,7 +4,7 @@ import DecorativeCircle from '../components/DecorativeCircle';
 export default function OurWork() {
   return (
     <div className="pt-20">
-      <section className="relative py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] overflow-hidden">
+      {/* <section className="relative py-20 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] overflow-hidden">
         <DecorativeCircle color="gold" size="large" position="top-10 right-10" />
         <DecorativeCircle color="gold" size="medium" position="bottom-10 left-10" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -15,9 +15,9 @@ export default function OurWork() {
             Transforming communities through targeted programs and sustainable initiatives
           </p>
         </div>
-      </section>
+      </section> */}
 
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#6B2C91] mb-4">
@@ -26,7 +26,7 @@ export default function OurWork() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our comprehensive approach addresses multiple aspects of community wellbeing
             </p>
-          </div>
+          </div> */}
 
           {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -88,8 +88,8 @@ export default function OurWork() {
               </div>
             ))}
           </div> */}
-        </div>
-      </section>
+        {/* </div>
+      </section> */}
 
       <section className="py-20 bg-gradient-to-r from-[#6B2C91] to-[#8B3CB1] relative overflow-hidden">
         <DecorativeCircle color="gold" size="medium" position="top-0 left-0" />
@@ -106,7 +106,7 @@ export default function OurWork() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { number: '3000+', label: 'Total Meals', sublabel: 'Served to children' },
-              { number: '7000+', label: 'Children Helped', sublabel: 'Direct beneficiaries' },
+              { number: '1000+', label: 'Children Helped', sublabel: 'Direct beneficiaries' },
               { number: '12+', label: 'Communities', sublabel: 'Across 2 countries' },
               // { number: '100+', label: 'Active Programs', sublabel: 'Running currently' },
             ].map((stat, index) => (
@@ -163,6 +163,13 @@ export default function OurWork() {
                 description: 'No child should face life alone on the streets. 💛We reached out to underprivileged children, sharing warm meals, school supplies, and moments of care. Every smile, every helping hand, every act of kindness brings hope and a brighter tomorrow. ✨',
                 results: ['Children supported with food, school supplies, and learning', '  Volunteers coming together to make a difference','Countless smiles and hearts touched 💫'],
                 image: '/sl_4.jpg'
+              },
+              {
+                title: 'A birthday to remember — shared with little hearts full of dreams! 🥰',
+                location: 'International',
+                description: 'The Grateful Tribe celebrated a special day surrounded by laughter, cake, and endless smiles.What made it truly special? Sharing joy, love, and moments that mattered. 💛',
+                results: ['Shared a joyful birthday celebration with children', ' Filled the day with cakes, fun, and happy moments', 'Created lasting smiles and beautiful memories 💫'],
+                image: '/sl_6.jpg'
               },
             ].map((project, index) => (
               <div
