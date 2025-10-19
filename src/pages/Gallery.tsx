@@ -317,7 +317,7 @@ export default function Gallery() {
             Stay connected and see our latest updates on social media
           </p>
 
-          <div className="flex justify-center gap-6 mb-10">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10 px-4">
             <a
               href="https://www.youtube.com/@TheGratefulTribe"
               target="_blank"
@@ -344,16 +344,23 @@ export default function Gallery() {
               <Instagram size={36} className="text-white" />
             </a>
             <a
+              href="#"
+              className="bg-white/10 p-6 rounded-full hover:bg-white/20 transition-all transform hover:scale-110 opacity-50 cursor-not-allowed backdrop-blur-sm"
+              aria-label="TikTok"
+            >
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" className="text-white">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+              </svg>
+            </a>
+            <a
               href="https://t.me/TheGratefulTribe"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 p-6 rounded-full hover:bg-white/20 transition-all transform hover:scale-110 backdrop-blur-sm"
               aria-label="Telegram"
             >
-              <svg width="36" height="36" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-                <path d="M120 0C53.729 0 0 53.729 0 120s53.729 120 120 120 120-53.729 120-120S186.271 0 120 0z" fill="#2AABEE"/>
-                <path d="M48 124.5l30.5 11.5 12 38 19-27 48 29L48 124.5z" fill="#fff" opacity="0.9"/>
-                <path d="M48 124.5L192 72l-48 52-19 27-12-38L48 124.5z" fill="#fff" opacity="0.6"/>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" className="text-white">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
               </svg>
             </a>
           </div>
