@@ -177,29 +177,32 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
+            {/* On mobile: image first, then description, then button last. On md+ screens: text left, image right */}
+            <div className="order-1 md:order-2">
               <img
                 src="/sl_founder.jpg"
                 alt="Sal Khan - Founder"
                 className="rounded-3xl shadow-2xl w-full"
               />
             </div>
-            <div className="text-white order-1 md:order-2">
+            <div className="text-white order-2 md:order-1">
               <h2 className="text-4xl md:text-5xl font-black mb-6">
                 Meet Our Founder
               </h2>
               <p className="text-lg md:text-xl leading-relaxed mb-8">
                 Sal Khan's vision and dedication have shaped The Grateful Tribe into a force for positive change. Learn more about the journey and the inspiration behind our mission.
               </p>
-              <button
-                onClick={() => {
-                  const event = new CustomEvent('navigate', { detail: 'founder' });
-                  window.dispatchEvent(event);
-                }}
-                className="bg-[#E8C547] text-[#6B2C91] px-10 py-4 rounded-full font-black text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-xl"
-              >
-                Learn More
-              </button>
+              <div className="flex justify-start md:justify-start">
+                <button
+                  onClick={() => {
+                    const event = new CustomEvent('navigate', { detail: 'founder' });
+                    window.dispatchEvent(event);
+                  }}
+                  className="bg-[#E8C547] text-[#6B2C91] px-10 py-4 rounded-full font-black text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-xl"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -8,21 +8,51 @@ import Founder from './pages/Founder';
 import Projects from './pages/Projects';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  // Initialize from URL hash so refresh preserves the current page
+  const getHashPage = () => {
+    try {
+      const h = window.location.hash.replace('#', '');
+      return h || 'home';
+    } catch (e) {
+      return 'home';
+    }
+  };
+
+  const [currentPage, setCurrentPage] = useState<string>(() => getHashPage());
 
   useEffect(() => {
     const handleNavigate = (event: Event) => {
       const customEvent = event as CustomEvent;
-      setCurrentPage(customEvent.detail);
+      const page = customEvent.detail || 'home';
+      setCurrentPage(page);
+      if (window.location.hash !== `#${page}`) {
+        window.location.hash = page;
+      }
+      window.scrollTo(0, 0);
+    };
+
+    const handleHashChange = () => {
+      setCurrentPage(getHashPage());
       window.scrollTo(0, 0);
     };
 
     window.addEventListener('navigate', handleNavigate);
+    window.addEventListener('hashchange', handleHashChange);
 
     return () => {
       window.removeEventListener('navigate', handleNavigate);
+      window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
+
+  // navigation helper to pass to Navigation so clicks update the URL hash as well
+  const navigateTo = (page: string) => {
+    setCurrentPage(page);
+    if (window.location.hash !== `#${page}`) {
+      window.location.hash = page;
+    }
+    window.scrollTo(0, 0);
+  };
 
   const renderPage = () => {
     switch (currentPage) {
@@ -45,7 +75,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
+  <Navigation currentPage={currentPage} onNavigate={navigateTo} />
       {renderPage()}
     </div>
   );
