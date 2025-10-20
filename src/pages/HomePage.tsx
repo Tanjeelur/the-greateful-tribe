@@ -76,7 +76,7 @@ export default function HomePage() {
             <div className="w-full max-w-[90%] lg:max-w-[80%] mx-auto px-4 sm:px-0 py-4 sm:py-6">
               <div className="text-center">
                 <div className="mb-4 sm:mb-6">
-                  <div className="text-xl sm:text-3xl md:text-6xl lg:text-8xl font-black text-white tracking-tight leading-none break-words">
+                  <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black text-white tracking-tight leading-none break-words">
                     {hasStartedCounting && (
                       <CountUp
                         start={0}
@@ -88,7 +88,7 @@ export default function HomePage() {
                       />
                     )}
                   </div>
-                  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-white/90 mx-auto leading-tight mt-4 whitespace-normal break-words">
+                  <p className="text-sm sm:text-lg md:text-2xl lg:text-3xl font-bold text-white/90 mx-auto leading-tight mt-4 whitespace-normal break-words">
                     The Grateful Tribe aims to use 1st world opportunities in the digital economy to uplift causes and kids in 3rd world countries.
                   </p>
                 </div>
