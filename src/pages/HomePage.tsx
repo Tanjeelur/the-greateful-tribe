@@ -46,62 +46,66 @@ export default function HomePage() {
 
   return (
     <div className="pt-20">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div
-          className="absolute inset-0 cursor-pointer group"
-          onClick={handleVideoClick}
-        >
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover opacity-80"
-            src="website-intro.mp4"
+      <section className="relative flex items-center justify-center overflow-hidden bg-black">
+        <div className="w-full relative min-h-[220px] sm:min-h-[320px]" style={{ aspectRatio: '16/9' }}>
+          <div
+            className="absolute inset-0 cursor-pointer group"
+            onClick={handleVideoClick}
           >
-            <source src="website-intro" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
-          <button className="absolute top-8 right-8 bg-black/50 p-4 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm">
-            {isMuted ? <VolumeX className="text-white" size={24} /> : <Volume2 className="text-white" size={24} />}
-          </button>
-        </div>
+            <video
+              ref={videoRef}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover opacity-80"
+              src="website-intro.mp4"
+            >
+              <source src="website-intro" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
+            <button className="absolute top-4 right-4 sm:top-8 sm:right-8 bg-black/50 p-3 sm:p-4 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm z-30">
+              {isMuted ? <VolumeX className="text-white" size={20} /> : <Volume2 className="text-white" size={20} />}
+            </button>
+          </div>
 
-        <div 
-          ref={counterRef}
-          className="absolute inset-0 z-20 flex items-center justify-center"
-        >
-          <div className="text-center px-4 sm:px-6 lg:px-8">
-            <div className="mb-8">
-              <div className="text-5xl sm:text-7xl md:text-9xl font-black text-white mb-4">
-                {hasStartedCounting && (
-                  <CountUp
-                    start={0}
-                    end={1000000}
-                    duration={3}
-                    separator=","
-                    enableScrollSpy={false}
-                    delay={0}
-                  />
-                )}
-              </div>
-              <p className="text-2xl md:text-3xl font-bold text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                The Grateful Tribe aims to use 1st world opportunities in the digital economy to uplift causes and kids in 3rd world countries.
-              </p>
-              <div className="max-w-3xl mx-auto px-4">
-                {/* Progress bar container */}
-                <div className="h-6 bg-black/30 rounded-full p-1 backdrop-blur-sm mb-2">
-                  {/* Progress bar fill - width is calculated as (current/total * 100) */}
-                  <div 
-                    className="h-full bg-gradient-to-r from-[#E8C547] to-[#6B2C91] rounded-full"
-                    style={{ width: `${(10000 / 1000000) * 100}%` }}
-                  />
+          <div 
+            ref={counterRef}
+            className="absolute inset-0 z-20 flex items-center justify-center"
+          >
+            <div className="w-full max-w-[90%] lg:max-w-[80%] mx-auto px-4 sm:px-0 py-4 sm:py-6">
+              <div className="text-center">
+                <div className="mb-4 sm:mb-6">
+                  <div className="text-xl sm:text-3xl md:text-6xl lg:text-8xl font-black text-white tracking-tight leading-none break-words">
+                    {hasStartedCounting && (
+                      <CountUp
+                        start={0}
+                        end={1000000}
+                        duration={3}
+                        separator=","
+                        enableScrollSpy={false}
+                        delay={0}
+                      />
+                    )}
+                  </div>
+                  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-white/90 mx-auto leading-tight mt-4 whitespace-normal break-words">
+                    The Grateful Tribe aims to use 1st world opportunities in the digital economy to uplift causes and kids in 3rd world countries.
+                  </p>
                 </div>
-                {/* Progress text */}
-                <p className="text-sm md:text-base font-medium text-white/80">
-                  5 of 1,000,000 children helped so far
-                </p>
+                <div className="w-full max-w-2xl mx-auto">
+                  {/* Progress bar container */}
+                  <div className="h-3 sm:h-4 md:h-5 bg-black/30 rounded-full p-[3px] sm:p-1 backdrop-blur-sm mb-2">
+                    {/* Progress bar fill - width is calculated as (current/total * 100) */}
+                    <div 
+                      className="h-full bg-gradient-to-r from-[#E8C547] to-[#6B2C91] rounded-full transition-all duration-1000 ease-out"
+                      style={{ width: `${(10000 / 1000000) * 100}%` }}
+                    />
+                  </div>
+                  {/* Progress text */}
+                  <p className="text-xs sm:text-sm md:text-base font-medium text-white/80 whitespace-normal break-words">
+                    5 of 1,000,000 children helped so far
+                  </p>
+                </div>
               </div>
             </div>
           </div>
