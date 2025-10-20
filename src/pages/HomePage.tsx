@@ -5,6 +5,7 @@ import DecorativeCircle from '../components/DecorativeCircle';
 
 export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const counterRef = useRef<HTMLDivElement>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [hasStartedCounting, setHasStartedCounting] = useState(false);
 
@@ -21,23 +22,24 @@ export default function HomePage() {
   };
 
   useEffect(() => {
+    setHasStartedCounting(true); // Start counter immediately since it's on the hero section
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setHasStartedCounting(true);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
-    const counterSection = document.getElementById('impact-counter');
-    if (counterSection) {
-      observer.observe(counterSection);
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
     }
 
     return () => {
-      if (counterSection) {
-        observer.unobserve(counterSection);
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
       }
     };
   }, []);
@@ -60,10 +62,49 @@ export default function HomePage() {
           >
             <source src="website-intro" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
           <button className="absolute top-8 right-8 bg-black/50 p-4 rounded-full hover:bg-black/70 transition-all backdrop-blur-sm">
             {isMuted ? <VolumeX className="text-white" size={24} /> : <Volume2 className="text-white" size={24} />}
           </button>
+        </div>
+
+        <div 
+          ref={counterRef}
+          className="absolute inset-0 z-20 flex items-center justify-center"
+        >
+          <div className="text-center px-4 sm:px-6 lg:px-8">
+            <div className="mb-8">
+              <div className="text-5xl sm:text-7xl md:text-9xl font-black text-white mb-4">
+                {hasStartedCounting && (
+                  <CountUp
+                    start={0}
+                    end={1000000}
+                    duration={3}
+                    separator=","
+                    enableScrollSpy={false}
+                    delay={0}
+                  />
+                )}
+              </div>
+              <p className="text-2xl md:text-3xl font-bold text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+                The Grateful Tribe aims to use 1st world opportunities in the digital economy to uplift causes and kids in 3rd world countries.
+              </p>
+              <div className="max-w-3xl mx-auto px-4">
+                {/* Progress bar container */}
+                <div className="h-6 bg-black/30 rounded-full p-1 backdrop-blur-sm mb-2">
+                  {/* Progress bar fill - width is calculated as (current/total * 100) */}
+                  <div 
+                    className="h-full bg-gradient-to-r from-[#E8C547] to-[#6B2C91] rounded-full"
+                    style={{ width: `${(10000 / 1000000) * 100}%` }}
+                  />
+                </div>
+                {/* Progress text */}
+                <p className="text-sm md:text-base font-medium text-white/80">
+                  5 of 1,000,000 children helped so far
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
@@ -94,30 +135,6 @@ export default function HomePage() {
             </h2>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
               The Grateful Tribe is an organization founded by Sal Khan with a mission to create meaningful change in the world. It helps children who have missed out on the joys of childhood to experience love, care, and happiness they deserve. At the same time, The Grateful Tribe empowers people to grow their income potential through online projects and opportunities, helping them achieve financial freedom. By joining The Grateful Tribe, you become part of a community that spreads kindness, supports those in need, and creates a better future for all.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="impact-counter" className="py-20 md:py-32 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] relative overflow-hidden">
-        <DecorativeCircle color="gold" size="large" position="top-10 -left-20" />
-        <DecorativeCircle color="gold" size="medium" position="bottom-10 -right-20" />
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="mb-8">
-            <div className="text-5xl sm:text-7xl md:text-9xl font-black text-[#E8C547] mb-4">
-              {hasStartedCounting && (
-                <CountUp
-                  start={0}
-                  end={1000000}
-                  duration={3}
-                  separator=","
-                  enableScrollSpy={false}
-                />
-              )}
-            </div>
-            <p className="text-2xl md:text-3xl font-bold text-white max-w-3xl mx-auto leading-relaxed">
-              The Grateful Tribe aims to help 1 million children worldwide through the support of the people who are part of the Grateful Tribe.
             </p>
           </div>
         </div>
