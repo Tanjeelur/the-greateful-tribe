@@ -98,7 +98,7 @@ export default function HomePage() {
                     {/* Progress bar fill - width is calculated as (current/total * 100) */}
                     <div 
                       className="h-full bg-gradient-to-r from-[#F5D76E] to-[#E8C547] rounded-full transition-all duration-1000 ease-out shadow-sm"
-                      style={{ width: `${(10000 / 1000000) * 100}%` }}
+                      style={{ width: `${(10001 / 1000000) * 100}%` }}
                     />
                   </div>
                   {/* Progress text */}
