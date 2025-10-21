@@ -157,8 +157,8 @@ export default function WhoWeAre() {
           <div className="text-center">
             <img src="/TGT-LOGO-1.png" alt="TGT Logo" className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-black mb-2">The Grateful Tribe</h3>
-            <p className="text-gray-300 mb-4">Creating positive change through gratitude and action</p>
-            <p className="text-sm text-gray-400">&copy; 2024 The Grateful Tribe. All rights reserved.</p>
+            <p className="text-gray-300 mb-4">Helping those with BIG hearts achieve BIG wallets.</p>
+            <p className="text-sm text-gray-400">&copy; 2025 The Grateful Tribe. All rights reserved.</p>
           </div>
         </div>
       </footer>

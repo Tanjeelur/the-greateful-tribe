@@ -138,7 +138,7 @@ export default function HomePage() {
               What is The Grateful Tribe?
             </h2>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              The Grateful Tribe is an organization founded by Sal Khan with a mission to create meaningful change in the world. It helps children who have missed out on the joys of childhood to experience love, care, and happiness they deserve. At the same time, The Grateful Tribe empowers people to grow their income potential through online projects and opportunities, helping them achieve financial freedom. By joining The Grateful Tribe, you become part of a community that spreads kindness, supports those in need, and creates a better future for all.
+              The Grateful Tribe is a mindful movement of digital entrepreneurs around the world who use the digital economy to make money online from the comforts of being at home or on their phone while traveling the world while sharing our gratitude and income from such modern income streams to bring joy to kids who are starving for a ray of hope.
             </p>
           </div>
         </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
           <div className="text-center mb-8">
             <img src="/TGT-LOGO-1.png" alt="TGT Logo" className="h-20 w-20 mx-auto mb-6" />
             <h3 className="text-3xl font-black mb-3">The Grateful Tribe</h3>
-            <p className="text-lg text-gray-300 mb-8">Creating positive change through gratitude and action</p>
+            <p className="text-lg text-gray-300 mb-8">Helping those with BIG hearts achieve BIG wallets.</p>
 
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-8 px-4">
               <a
@@ -284,7 +284,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            <p className="text-sm text-gray-400">&copy; 2024 The Grateful Tribe. All rights reserved.</p>
+            <p className="text-sm text-gray-400">&copy; 2025 The Grateful Tribe. All rights reserved.</p>
           </div>
         </div>
       </footer>
