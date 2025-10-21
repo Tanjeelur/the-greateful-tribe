@@ -103,7 +103,7 @@ export default function HomePage() {
                   </div>
                   {/* Progress text */}
                   <p className="text-xs sm:text-sm md:text-base font-medium text-white/80 whitespace-normal break-words">
-                    5 of 1,000,000 children helped so far
+                    (5 of 1,000,000 children inspired so far)
                   </p>
                 </div>
               </div>
