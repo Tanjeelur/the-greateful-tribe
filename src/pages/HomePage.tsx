@@ -94,10 +94,10 @@ export default function HomePage() {
                 </div>
                 <div className="w-full max-w-2xl mx-auto">
                   {/* Progress bar container */}
-                  <div className="h-3 sm:h-4 md:h-5 bg-black/30 rounded-full p-[3px] sm:p-1 backdrop-blur-sm mb-2">
+                  <div className="h-3 sm:h-4 md:h-5 bg-[#6B2C91] rounded-full p-[3px] sm:p-1 backdrop-blur-sm mb-2">
                     {/* Progress bar fill - width is calculated as (current/total * 100) */}
                     <div 
-                      className="h-full bg-gradient-to-r from-[#E8C547] to-[#6B2C91] rounded-full transition-all duration-1000 ease-out"
+                      className="h-full bg-gradient-to-r from-[#F5D76E] to-[#E8C547] rounded-full transition-all duration-1000 ease-out shadow-sm"
                       style={{ width: `${(10000 / 1000000) * 100}%` }}
                     />
                   </div>
@@ -232,7 +232,7 @@ export default function HomePage() {
       <footer className="bg-[#6B2C91] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <img src="/TGT-LOGO-1.png" alt="TGT Logo" className="h-20 w-20 mx-auto mb-6" />
+            <img src="/TGT-LOGO-removebg.png" alt="TGT Logo" className="h-20 w-20 mx-auto mb-6" />
             <h3 className="text-3xl font-black mb-3">The Grateful Tribe</h3>
             <p className="text-lg text-gray-300 mb-8">Helping those with BIG hearts achieve BIG wallets.</p>
 
