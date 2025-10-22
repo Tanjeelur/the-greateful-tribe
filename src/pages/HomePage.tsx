@@ -128,21 +128,7 @@ export default function HomePage() {
         </div> */}
       </section>
 
-      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
-        <DecorativeCircle color="purple" size="large" position="top-0 right-0" />
-        <DecorativeCircle color="gold" size="medium" position="bottom-0 left-0" />
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-black text-[#6B2C91] mb-8">
-              What is The Grateful Tribe?
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              The Grateful Tribe is a mindful movement of digital entrepreneurs around the world who use the digital economy to make money online from the comforts of being at home or on their phone while traveling the world while sharing our gratitude and income from such modern income streams to bring joy to kids who are starving for a ray of hope.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       <section className="py-20 md:py-32 bg-white relative overflow-hidden">
         <DecorativeCircle color="purple" size="medium" position="top-20 right-20" />
@@ -150,7 +136,8 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-black text-[#6B2C91] mb-6">
-              Projects that Make a Difference
+              
+              What is The Grateful Tribe?
             </h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
               Join our projects and earn money while helping children in need. By being part of The Grateful Tribe, you create opportunities for yourself while supporting a mission to give kids the childhood they deserve. Make an impact and grow your income at the same time.
@@ -162,9 +149,9 @@ export default function HomePage() {
               <div className="bg-[#E8C547] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="text-[#6B2C91]" size={40} />
               </div>
-              <h3 className="text-2xl font-black mb-3">Help Children</h3>
+              <h3 className="text-2xl font-black mb-3">Uplifting Children</h3>
               <p className="text-lg leading-relaxed">
-                Support children who need love, care, and the joy of childhood
+                We use our profits to bring joys of childhood back to kids.
               </p>
             </div>
 
@@ -172,9 +159,9 @@ export default function HomePage() {
               <div className="bg-[#6B2C91] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <DollarSign className="text-[#E8C547]" size={40} />
               </div>
-              <h3 className="text-2xl font-black mb-3">Earn Income</h3>
+              <h3 className="text-2xl font-black mb-3">Empowering Everyone </h3>
               <p className="text-lg leading-relaxed">
-                Grow your income potential through meaningful online opportunities
+                We learn and share the skills needed to create part time to full time to live changing income.
               </p>
             </div>
           </div>
@@ -189,6 +176,22 @@ export default function HomePage() {
             >
               Join the Projects <ArrowRight size={24} />
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+        <DecorativeCircle color="purple" size="large" position="top-0 right-0" />
+        <DecorativeCircle color="gold" size="medium" position="bottom-0 left-0" />
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-6xl font-black text-[#6B2C91] mb-8">
+              A Global Tribe Making A Global Impact
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              As a community we come together online to earn and share the skills and income opportunities that help us make money from our phones using the latest and greatest in financial tech, content creation and Ai tools. By being a member of The Grateful Tribe, you open opportunities and connections for yourself while supporting a mission to give kids in need a brighter and more joyful childhood.
+            </p>
           </div>
         </div>
       </section>
