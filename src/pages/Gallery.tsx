@@ -459,16 +459,7 @@ export default function Gallery() {
           </div>
         </div>
       </footer> */}
-      <footer className="bg-[#6B2C91] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <img src="/TGT-LOGO-removebg.png" alt="TGT Logo" className="h-16 w-16 mx-auto mb-4" />
-            <h3 className="text-2xl font-black mb-2">The Grateful Tribe</h3>
-            <p className="text-gray-300 mb-4">Helping those with BIG hearts achieve BIG wallets.</p>
-            <p className="text-sm text-gray-400">&copy; 2025 The Grateful Tribe. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      {/* Footer removed - now using global footer component */}
     </div>
   );
 }

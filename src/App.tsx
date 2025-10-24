@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import WhoWeAre from './pages/WhoWeAre';
 import Gallery from './pages/Gallery';
@@ -74,9 +75,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-  <Navigation currentPage={currentPage} onNavigate={navigateTo} />
-      {renderPage()}
+    <div className="min-h-screen bg-white flex flex-col">
+      <Navigation currentPage={currentPage} onNavigate={navigateTo} />
+      <div className="flex-grow">
+        {renderPage()}
+      </div>
+      <Footer currentPage={currentPage} onNavigate={navigateTo} />
     </div>
   );
 }
