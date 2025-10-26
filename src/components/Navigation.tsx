@@ -11,9 +11,9 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
 
   const menuItems = [
     { id: 'home', label: 'Home' },
-    { id: 'who-we-are', label: 'Who We Are' },
+    { id: 'who-we-are', label: 'Our Tribe' },
     { id: 'founder', label: 'Our Founder' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'projects', label: 'Partner with Us' },
     { id: 'our-work', label: 'Our Work' },
     { id: 'gallery', label: 'Gallery' },
   ];
@@ -77,6 +77,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 {item.label}
               </button>
             ))}
+
           </div>
         </div>
       )}

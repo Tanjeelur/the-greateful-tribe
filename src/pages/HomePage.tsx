@@ -181,24 +181,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
-        <DecorativeCircle color="purple" size="large" position="top-0 right-0" />
+      <section className="py-20 md:py-32 bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] relative overflow-hidden">
+        <DecorativeCircle color="gold" size="large" position="top-0 right-0" />
         <DecorativeCircle color="gold" size="medium" position="bottom-0 left-0" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-black text-[#6B2C91] mb-8">
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
               A Global Tribe Making A Global Impact
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              As a community we come together online to earn and share the skills and income opportunities that help us make money from our phones using the latest and greatest in financial tech, content creation and Ai tools. By being a member of The Grateful Tribe, you open opportunities and connections for yourself while supporting a mission to give kids in need a brighter and more joyful childhood.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+              As a community we come together online to earn and share the skills and income opportunities that help us make money from our phones using the latest and greatest in financial tech, content creation and Ai tools. By being a member of The Grateful Tribe, you open opportunities and connections for yourself while supporting a mission to give kids in need a brighter and more joyful childhood.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-32 bg-gradient-to-r from-[#6B2C91] to-[#8B3CB1] relative overflow-hidden">
-        <DecorativeCircle color="gold" size="large" position="top-0 left-0" />
+
+      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+        <DecorativeCircle color="purple" size="large" position="top-0 left-0" />
+        <DecorativeCircle color="gold" size="medium" position="bottom-0 right-0" />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -210,11 +212,11 @@ export default function HomePage() {
                 className="rounded-3xl shadow-2xl w-full"
               />
             </div>
-            <div className="text-white order-2 md:order-1">
-              <h2 className="text-4xl md:text-5xl font-black mb-6">
+            <div className="order-2 md:order-1">
+              <h2 className="text-4xl md:text-5xl font-black text-[#6B2C91] mb-6">
                 Meet Our Founder
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
                 Sal Khan's vision and dedication have shaped The Grateful Tribe into a force for positive change. Learn more about the journey and the inspiration behind our mission.
               </p>
               <div className="flex justify-start md:justify-start">
@@ -223,7 +225,7 @@ export default function HomePage() {
                     const event = new CustomEvent('navigate', { detail: 'founder' });
                     window.dispatchEvent(event);
                   }}
-                  className="bg-[#E8C547] text-[#6B2C91] px-10 py-4 rounded-full font-black text-lg hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-xl"
+                  className="bg-[#6B2C91] text-white px-10 py-4 rounded-full font-black text-lg hover:bg-[#8B3CB1] transform hover:scale-105 transition-all shadow-xl"
                 >
                   Learn More
                 </button>
