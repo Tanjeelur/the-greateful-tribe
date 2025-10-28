@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
+import PromoBar from './components/PromoBar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 
@@ -88,10 +89,15 @@ function App() {
     }
   };
 
+  const showPromoBar = !currentPage.startsWith('courses');
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Navigation currentPage={currentPage} onNavigate={navigateTo} />
-      <div className="flex-grow">
+      {showPromoBar && (
+        <PromoBar onNavigate={navigateTo} />
+      )}
+      <Navigation currentPage={currentPage} onNavigate={navigateTo} hasTopBar={showPromoBar} />
+      <div className={`flex-grow ${showPromoBar ? 'pt-10' : ''}`}>
         {renderPage()}
       </div>
       <Footer currentPage={currentPage} onNavigate={navigateTo} />

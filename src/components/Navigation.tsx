@@ -4,9 +4,10 @@ import { useState } from 'react';
 interface NavigationProps {
   currentPage: string;
   onNavigate: (page: string) => void;
+  hasTopBar?: boolean;
 }
 
-export default function Navigation({ currentPage, onNavigate }: NavigationProps) {
+export default function Navigation({ currentPage, onNavigate, hasTopBar = false }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
 
@@ -35,7 +36,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#6B2C91] shadow-md z-50">
+    <nav className={`fixed ${hasTopBar ? 'top-10' : 'top-0'} left-0 right-0 bg-[#6B2C91] shadow-md z-50`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <button
