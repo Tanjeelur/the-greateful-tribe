@@ -19,7 +19,7 @@ function App() {
     try {
       const h = window.location.hash.replace('#', '');
       return h || 'home';
-    } catch (e) {
+    } catch {
       return 'home';
     }
   };

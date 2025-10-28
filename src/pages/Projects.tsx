@@ -98,9 +98,7 @@ export default function Projects() {
                           className="w-14 h-14 object-cover"
                           onError={(e) => {
                             // replace broken image with fallback image
-                            // @ts-ignore
                             e.currentTarget.onerror = null;
-                            // @ts-ignore
                             e.currentTarget.src = '/images/logo-fallback.png';
                           }}
                         />

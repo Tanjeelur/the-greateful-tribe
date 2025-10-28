@@ -8,11 +8,21 @@ interface NavigationProps {
 
 export default function Navigation({ currentPage, onNavigate }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
 
   const menuItems = [
     { id: 'home', label: 'Home' },
     { id: 'who-we-are', label: 'Our Tribe' },
     { id: 'founder', label: 'Our Founder' },
+    {
+      id: 'courses',
+      label: 'Courses',
+      children: [
+        { id: 'courses/seo', label: 'SEO' },
+        { id: 'courses/digital-marketing', label: 'Digital Marketing' },
+        { id: 'courses/content-creation', label: 'Content Creation' },
+      ],
+    },
     { id: 'projects', label: 'Partner with Us' },
     { id: 'our-work', label: 'Our Work' },
     { id: 'gallery', label: 'Gallery' },
@@ -38,17 +48,42 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
 
           <div className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavigate(item.id)}
-                className={`text-lg font-bold transition-all ${
-                  currentPage === item.id
-                    ? 'text-white border-b-4 border-[#E8C547]'
-                    : 'text-white/90 hover:text-white'
-                }`}
-              >
-                {item.label}
-              </button>
+              item.children ? (
+                <div key={item.id} className="relative group">
+                  <button
+                    className={`text-lg font-bold transition-all ${
+                      currentPage === item.id
+                        ? 'text-white border-b-4 border-[#E8C547]'
+                        : 'text-white/90 hover:text-white'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                  <div className="absolute left-0 mt-2 w-56 bg-white text-[#6B2C91] rounded-xl shadow-lg py-2 z-50 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition">
+                    {item.children.map((child: { id: string; label: string }) => (
+                      <button
+                        key={child.id}
+                        onClick={() => handleNavigate(child.id)}
+                        className="block w-full text-left px-4 py-2 font-semibold hover:bg-[#F9F5FF]"
+                      >
+                        {child.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigate(item.id)}
+                  className={`text-lg font-bold transition-all ${
+                    currentPage === item.id
+                      ? 'text-white border-b-4 border-[#E8C547]'
+                      : 'text-white/90 hover:text-white'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </div>
 
@@ -65,17 +100,35 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
         <div className="md:hidden bg-[#6B2C91] border-t border-[#5a2380]">
           <div className="px-4 py-6 space-y-4">
             {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavigate(item.id)}
-                className={`block w-full text-left text-lg font-bold py-2 transition-colors ${
-                  currentPage === item.id
-                    ? 'text-white'
-                    : 'text-white/90 hover:text-white'
-                }`}
-              >
-                {item.label}
-              </button>
+              <div key={item.id}>
+                <button
+                  onClick={() =>
+                    item.children
+                      ? setOpenMobileDropdown(openMobileDropdown === item.id ? null : item.id)
+                      : handleNavigate(item.id)
+                  }
+                  className={`block w-full text-left text-lg font-bold py-2 transition-colors ${
+                    currentPage === item.id
+                      ? 'text-white'
+                      : 'text-white/90 hover:text-white'
+                  }`}
+                >
+                  {item.label}
+                </button>
+                {item.children && openMobileDropdown === item.id && (
+                  <div className="pl-4 mt-1 space-y-1">
+                    {item.children.map((child: { id: string; label: string }) => (
+                      <button
+                        key={child.id}
+                        onClick={() => handleNavigate(child.id)}
+                        className="block w-full text-left text-base font-medium py-1 text-white/90 hover:text-white"
+                      >
+                        {child.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
 
           </div>

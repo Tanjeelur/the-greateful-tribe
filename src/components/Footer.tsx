@@ -8,9 +8,18 @@ interface FooterProps {
 export default function Footer({ currentPage, onNavigate }: FooterProps) {
   const menuItems = [
     { id: 'home', label: 'Home' },
-    { id: 'who-we-are', label: 'Who We Are' },
+    { id: 'who-we-are', label: 'Our Tribe' },
     { id: 'founder', label: 'Our Founder' },
-    { id: 'projects', label: 'Projects' },
+    {
+      id: 'courses',
+      label: 'Courses',
+      children: [
+        { id: 'courses/seo', label: 'SEO' },
+        { id: 'courses/digital-marketing', label: 'Digital Marketing' },
+        { id: 'courses/content-creation', label: 'Content Creation' },
+      ],
+    },
+    { id: 'projects', label: 'Partner with Us' },
     { id: 'our-work', label: 'Our Work' },
     { id: 'gallery', label: 'Gallery' },
   ];
@@ -52,28 +61,34 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
           {/* Main Navigation - horizontal on all screens */}
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavigate(item.id)}
-                className={`text-base font-medium transition-all ${
-                  currentPage === item.id
-                    ? 'text-[#E8C547]'
-                    : 'text-white/90 hover:text-[#E8C547]'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-          
-          {/* Mobile Navigation - horizontal scrollable */}
-          <div className="md:hidden w-full overflow-x-auto pb-4 scrollbar-hide">
-            <div className="flex space-x-4 min-w-max px-1">
-              {menuItems.map((item) => (
+              item.children ? (
+                <div key={item.id} className="relative group">
+                  <button
+                    className={`text-base font-medium transition-all ${
+                      currentPage === item.id
+                        ? 'text-[#E8C547]'
+                        : 'text-white/90 hover:text-[#E8C547]'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                  <div className="absolute left-0 mt-2 w-56 bg-white text-[#6B2C91] rounded-xl shadow-lg py-2 z-50 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition">
+                    {item.children.map((child: { id: string; label: string }) => (
+                      <button
+                        key={child.id}
+                        onClick={() => handleNavigate(child.id)}
+                        className="block w-full text-left px-4 py-2 font-semibold hover:bg-[#F9F5FF]"
+                      >
+                        {child.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ) : (
                 <button
                   key={item.id}
                   onClick={() => handleNavigate(item.id)}
-                  className={`text-xs sm:text-sm whitespace-nowrap font-medium transition-all ${
+                  className={`text-base font-medium transition-all ${
                     currentPage === item.id
                       ? 'text-[#E8C547]'
                       : 'text-white/90 hover:text-[#E8C547]'
@@ -81,7 +96,51 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
                 >
                   {item.label}
                 </button>
-              ))}
+              )
+            ))}
+          </div>
+          
+          {/* Mobile Navigation - horizontal scrollable */}
+          <div className="md:hidden w-full overflow-x-auto pb-4 scrollbar-hide">
+            <div className="flex space-x-4 min-w-max px-1 items-center">
+              {menuItems.flatMap((item) => {
+                if (!('children' in item) || !item.children) {
+                  return [
+                    <button
+                      key={item.id}
+                      onClick={() => handleNavigate(item.id)}
+                      className={`text-xs sm:text-sm whitespace-nowrap font-medium transition-all ${
+                        currentPage === item.id
+                          ? 'text-[#E8C547]'
+                          : 'text-white/90 hover:text-[#E8C547]'
+                      }`}
+                    >
+                      {item.label}
+                    </button>,
+                  ];
+                }
+                return [
+                  <button
+                    key={item.id}
+                    className={`text-xs sm:text-sm whitespace-nowrap font-medium transition-all ${
+                      currentPage === item.id
+                        ? 'text-[#E8C547]'
+                        : 'text-white/90 hover:text-[#E8C547]'
+                    }`}
+                  >
+                    {item.label}
+                  </button>,
+                  ...item.children.map((child: { id: string; label: string }) => (
+                    <button
+                      key={child.id}
+                      onClick={() => handleNavigate(child.id)}
+                      className="text-xs sm:text-sm whitespace-nowrap font-medium text-white/80 hover:text-[#E8C547]"
+                    >
+                      {child.label}
+                    </button>
+                  )),
+                ];
+              })}
             </div>
           </div>
         </div>
@@ -139,4 +198,3 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
     </footer>
   );
 }
-

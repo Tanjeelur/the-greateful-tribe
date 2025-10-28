@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { Volume2, VolumeX, ArrowRight, Heart, DollarSign, Youtube, Facebook, Instagram } from 'lucide-react';
+import { Volume2, VolumeX, ArrowRight, Heart, DollarSign } from 'lucide-react';
 import CountUp from 'react-countup';
 import DecorativeCircle from '../components/DecorativeCircle';
 
@@ -33,13 +33,14 @@ export default function HomePage() {
       { threshold: 0.1 }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const el = counterRef.current;
+    if (el) {
+      observer.observe(el);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (el) {
+        observer.unobserve(el);
       }
     };
   }, []);
@@ -82,7 +83,7 @@ export default function HomePage() {
                         start={0}
                         end={1000000}
                         duration={3}
-                        separator=","
+                        separator="," 
                         enableScrollSpy={false}
                         delay={0}
                         preserveValue={true}
@@ -104,7 +105,7 @@ export default function HomePage() {
                   </div>
                   {/* Progress text */}
                   <p className="text-xs sm:text-sm md:text-base font-medium text-white/80 whitespace-normal break-words">
-                    (5 of 1,000,000 children inspired so far)
+                    (5 of 1,000,000 children inspired so far)
                   </p>
                 </div>
               </div>
@@ -117,66 +118,68 @@ export default function HomePage() {
             Changing Lives<br />Through Gratitude
           </h1>
           <p className="text-xl md:text-3xl font-medium mb-8 max-w-4xl mx-auto">
-            Join our mission to create lasting impact in communities around the world
+            Join our mission to create lasting impact in communities around the world. We support education,
+            wellness, and self-driven growth through shared opportunity and gratitude.
           </p>
-          <a
-            href="https://t.me/TheGratefulTribe"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#E8C547] text-[#6B2C91] px-10 py-5 rounded-full font-black text-xl hover:bg-[#F5D76E] transform hover:scale-105 transition-all shadow-2xl">
-            Get Involved <ArrowRight size={24} />
-          </a>
+          <div className="flex justify-center">
+            <button className="inline-flex items-center gap-2 bg-[#E8C547] text-[#6B2C91] px-8 py-4 rounded-full font-bold hover:shadow-2xl transform hover:scale-105 transition-all">
+              Get Involved <ArrowRight size={20} />
+            </button>
+          </div>
         </div> */}
       </section>
 
-      
-
       <section className="py-20 md:py-32 bg-white relative overflow-hidden">
-        <DecorativeCircle color="purple" size="medium" position="top-20 right-20" />
+        <DecorativeCircle color="purple" size="large" position="top-0 right-0" />
+        <DecorativeCircle color="gold" size="medium" position="bottom-0 left-0" />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-black text-[#6B2C91] mb-6">
-              
-              What is The Grateful Tribe?
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
-              Join our projects and earn money while helping children in need. By being part of The Grateful Tribe, you create opportunities for yourself while supporting a mission to give kids the childhood they deserve. Make an impact and grow your income at the same time.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] rounded-2xl p-8 text-white text-center transform hover:scale-105 transition-all shadow-xl">
-              <div className="bg-[#E8C547] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="text-[#6B2C91]" size={40} />
-              </div>
-              <h3 className="text-2xl font-black mb-3">Uplifting Children</h3>
-              <p className="text-lg leading-relaxed">
-                We use our profits to bring joys of childhood back to kids.
+          <div className="grid grid-cols-1 gap-12 items-center">
+            <div className="text-center">
+              <h2 className="text-4xl md:text-6xl font-black text-[#6B2C91] mb-8">
+                What is The Grateful Tribe?
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                Join our projects and earn money while helping children in need. By being part of The Grateful Tribe, you create opportunities for yourself while supporting a mission to give kids the childhood they deserve. 
+                Make an impact and grow your income at the same time.
               </p>
+
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                <div className="bg-gradient-to-br from-[#6B2C91] to-[#8B3CB1] rounded-2xl p-8 text-white text-center transform hover:scale-105 transition-all shadow-xl">
+                  <div className="bg-[#E8C547] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Heart className="text-[#6B2C91]" size={40} />
+                  </div>
+                  <h3 className="text-2xl font-black mb-3">Uplifting Children</h3>
+                  <p className="text-lg leading-relaxed">
+                    We use our profits to bring joys of childhood back to kids.
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-[#E8C547] to-[#F5D76E] rounded-2xl p-8 text-[#6B2C91] text-center transform hover:scale-105 transition-all shadow-xl">
+                  <div className="bg-[#6B2C91] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <DollarSign className="text-[#E8C547]" size={40} />
+                  </div>
+                  <h3 className="text-2xl font-black mb-3">Empowering Everyone</h3>
+                  <p className="text-lg leading-relaxed">
+                    We learn and share the skills needed to create part time to full time to life changing income.
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <button
+                  onClick={() => {
+                    const event = new CustomEvent('navigate', { detail: 'projects' });
+                    window.dispatchEvent(event);
+                  }}
+                  className="inline-flex items-center gap-2 bg-[#6B2C91] text-white px-12 py-6 rounded-full font-black text-xl hover:bg-[#8B3CB1] transform hover:scale-105 transition-all shadow-2xl"
+                >
+                  Partner with Us <ArrowRight size={24} />
+                </button>
+              </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#E8C547] to-[#F5D76E] rounded-2xl p-8 text-[#6B2C91] text-center transform hover:scale-105 transition-all shadow-xl">
-              <div className="bg-[#6B2C91] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <DollarSign className="text-[#E8C547]" size={40} />
-              </div>
-              <h3 className="text-2xl font-black mb-3">Empowering Everyone </h3>
-              <p className="text-lg leading-relaxed">
-                We learn and share the skills needed to create part time to full time to live changing income.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button
-              onClick={() => {
-                const event = new CustomEvent('navigate', { detail: 'projects' });
-                window.dispatchEvent(event);
-              }}
-              className="inline-flex items-center gap-2 bg-[#6B2C91] text-white px-12 py-6 rounded-full font-black text-xl hover:bg-[#8B3CB1] transform hover:scale-105 transition-all shadow-2xl"
-            >
-              Join the Projects <ArrowRight size={24} />
-            </button>
+            
           </div>
         </div>
       </section>
@@ -196,7 +199,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
 
       <section className="py-20 md:py-32 bg-white relative overflow-hidden">
         <DecorativeCircle color="purple" size="large" position="top-0 left-0" />
